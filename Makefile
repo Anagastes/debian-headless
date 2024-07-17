@@ -107,7 +107,7 @@ qemu-uefi: image.qcow
 	@echo "    telnet localhost 33333\n"
 	${QEMU} -m 1024 \
 		-net user,hostfwd=tcp::22222-:22 \
-		-bios /usr/share/ovmf/OVMF.fd \
+		-bios /usr/share/ovmf/x64/OVMF.fd \
 		-net nic \
 		-hda image.qcow \
 		-serial telnet:localhost:33333,server,nowait \
