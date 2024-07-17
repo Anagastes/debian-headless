@@ -21,9 +21,10 @@ help:
 	@echo
 
 install-depends:
-	sudo apt-get install \
-		libarchive-tools syslinux syslinux-utils cpio genisoimage \
-		coreutils qemu-system qemu-system-x86 qemu-utils util-linux
+	sudo pacman -S \
+		cdrkit \
+		syslinux \
+		libisoburn
 
 config:
 	"$(if $(EDITOR),$(EDITOR),editor)" Makevars
