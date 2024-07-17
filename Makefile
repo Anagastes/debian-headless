@@ -73,7 +73,7 @@ md5sums:
 
 iso: ${TMP}
 	# Create ISO and fix MBR for USB boot.
-	genisoimage -V ${LABEL} \
+	xorrisofs -V ${LABEL} \
 		-r -J -b isolinux/isolinux.bin -c isolinux/boot.cat \
 		-no-emul-boot -boot-load-size 4 -boot-info-table \
 		-eltorito-alt-boot \
